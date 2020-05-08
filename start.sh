@@ -284,7 +284,7 @@ ibmcloud cf delete $APP_NAME -f
 
 # 部署应用到 IBM Cloud Foundry
 echo
-ibmcloud cf push --no-start
+ibmcloud cf push --no-start $APP_NAME
 
 # 获取应用程序端口信息，设置 APP_GUID & APP_PORT & ROUTE_GUID
 APP_GUID=$(ibmcloud cf app $APP_NAME --guid | tail -n 1)
